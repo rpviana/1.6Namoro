@@ -1,0 +1,236 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Estilizando o menu de navegação */
+nav {
+    margin-bottom: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.5em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilizando o conteúdo principal */
+.main-content {
+    text-align: center;
+}
+
+.main-content p.intro {
+    font-size: 3em; /* Tamanho maior para o texto de introdução do quiz */
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Estilo específico para o quiz */
+#quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.5em; /* Tamanho das perguntas */
+    align-items: center; /* Centraliza o conteúdo dentro do #quiz */
+    margin: 0 auto; /* Garante que o #quiz esteja centralizado na página */
+    max-width: 800px; /* Define uma largura máxima para o quiz */
+}
+
+.question {
+    margin-bottom: 20px;
+    width: 100%; /* Garante que a pergunta ocupe a largura total disponível */
+    max-width: 600px; /* Limita a largura máxima das perguntas */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.question p {
+    font-size: 1.5em; /* Tamanho do texto das perguntas */
+}
+
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    font-size: 1.2em; /* Tamanho do texto dentro dos campos de entrada */
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima dos campos */
+    margin-top: 10px;
+    border: 2px solid #ddd; /* Adiciona uma borda aos campos */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+/* Estilizando a galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery .gallery-item {
+    position: relative;
+    width: calc(33.333% - 20px);
+    aspect-ratio: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.gallery .gallery-item::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.gallery .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 5px solid #ddd;
+}
+
+.gallery .gallery-item.sixth img {
+    object-position: top; /* Garante que a sexta imagem exiba o topo */
+}
+
+.footer-text {
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .gallery .gallery-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery .gallery-item {
+        width: 100%;
+    }
+}
+
+/* Oculta a mensagem inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Estilizando a mensagem */
+#message-container p {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilizando a pergunta com imagem */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 5px solid #ddd;
+}
+
+/* Estilizando o botão de explicação */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Oculta a explicação inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Estilizando a explicação */
+#explicacao p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
